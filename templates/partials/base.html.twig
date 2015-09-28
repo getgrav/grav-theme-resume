@@ -16,34 +16,21 @@
             {% do assets.addCss('theme://css/app.css') %}
         {% endblock %}
         {{ assets.css() }}
-
          <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
-
+         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     {% endblock %}
 </head>
 
-<body class="home blog">
-    <div id="page" class="hfeed site">
-    {% block sidebar %}
-        {% include 'partials/sidebar.html.twig' %}
+<body>
+    {% block header %}
+        {% include 'partials/header.html.twig' %}
     {% endblock %}
     {% block body %}
-        <div id="content" class="site-content">
-            <div id="primary" class="content-area">
-                <main id="main" class="site-main" role="main">
-                    {% block content %}
-                    {% endblock %}
-                </main>
-            </div>
+        <div class="row">
+        {% block content %}
+        {% endblock %}
         </div>
     {% endblock %}
-    <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="site-info">
-            <a href="http://getgrav.org/">{{ 'SITE.COPYRIGHT'|t("now"|date('Y')) }}</a>
-        </div>
-    </footer>
-
-</div>
 
 {% block javascripts %}
     {% do assets.add('jquery',101) %}
