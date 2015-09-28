@@ -4,8 +4,7 @@ body {
   font-weight: 300;
 }
 
-/* Headers */
-
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -14,4 +13,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Row */
 .row {
   max-width: 75rem;
+}
+
+/* Border */
+.border-left {
+    border-left: 1px solid;
+}
+
+/* Header */
+#header {
+  padding-top: 3rem;
+}
+#header h1 {
+  margin-top: -0.65rem;
+}
+.light {
+  color: #BCBEC0;
+}
+.italic {
+  font-style: italic;
+}
+.website {
+  font-weight: 400;
 }
