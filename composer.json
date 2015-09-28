@@ -1,8 +1,8 @@
 {
     "name": "getgrav/grav-theme-resume",
     "type": "grav-theme",
-    "description": "Resume is a default, most popular in 2015, Wordpress theme ported to Grav !",
-    "keywords": ["theme","grav", "resume", "wordpress"],
+    "description": "Resume is a Grav adaptation of Fernando Báez resume PSD theme.",
+    "keywords": ["theme","grav", "resume"],
     "homepage": "http://getgrav.org",
     "license": "GPLv2 (or later)",
     "support": {

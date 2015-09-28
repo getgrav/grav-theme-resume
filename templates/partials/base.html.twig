@@ -1,37 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
 <head>
     {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
     {% block head %}
         <meta charset="utf-8" />
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
-        <meta name="viewport" content="width=device-width">
-        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
 
         {% block stylesheets %}
-            <link rel='stylesheet' id='resume-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
-            <link rel='stylesheet' id='genericons-css'  href='{{ url('theme://genericons/genericons.css') }}' type='text/css' media='all' /> 
-            <link rel='stylesheet' id='resume-style-css'  href='{{ url('theme://css/style.css') }}' type='text/css' media='all' />
-
-            <!--[if lt IE 9]>
-            <link rel='stylesheet' id='resume-ie-css'  href='{{ url('theme://css/ie.css') }}' type='text/css' media='all' />
-            <![endif]-->
-            <!--[if lt IE 8]>
-            <link rel='stylesheet' id='resume-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
-            <![endif]-->
+            {% do assets.addCss('theme://css/normalize.css') %}
+            {% do assets.addCss('theme://css/foundation.css') %}
+            {% do assets.addCss('theme://css/app.css') %}
         {% endblock %}
+        {{ assets.css() }}
 
-        {% block javascripts %}
-            {% do assets.add('jquery',101) %}
-        {% endblock %}
-        {{ assets.js() }}
-
-        {% block color_scheme %}
-            {% if theme_config.current_preset and theme_config.current_preset != 'default' %}
-                {% include 'partials/color_scheme.html.twig' %}
-            {% endif %}
-        {% endblock %}
+         <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
 
     {% endblock %}
 </head>
@@ -59,18 +45,11 @@
 
 </div>
 
-{% block javascripts_bottom %}
-    <script type='text/javascript'>
-    /* <![CDATA[ */
-    var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
-    /* ]]> */
-    </script>
-
-    <!--[if lte IE 8]><script type='text/javascript' src='{{ url('theme://js/html5.js') }}'></script><![endif]-->
-    <script type='text/javascript' src='{{ url('theme://js/jquery-migrate.min.js') }}'></script>
-    <script type='text/javascript' src='{{ url('theme://js/functions.js') }}'></script>
-    <script type='text/javascript' src='{{ url('theme://js/skip-link-focus-fix.js') }}'></script>
+{% block javascripts %}
+    {% do assets.add('jquery',101) %}
+    {% do assets.addCss('theme://js/foundation.min.js') %}
 {% endblock %}
-        
+{{ assets.js() }}
+
 </body>
 </html>

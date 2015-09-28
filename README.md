@@ -7,7 +7,7 @@ Resume by [Fernando Báez](https://www.behance.net/gallery/FREE-Resume-Template/
 # Features
 
 * coming soon
-* 
+
 # Installation
 
 Installing the Resume theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
