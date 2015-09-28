@@ -3,40 +3,40 @@
 <html class="no-js" lang="en" >
 <head>
     {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-    {% block head %}
-        <meta charset="utf-8" />
-        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
-        {% include 'partials/metadata.html.twig' %}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+        {% block head %}
+            <meta charset="utf-8" />
+            <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+            {% include 'partials/metadata.html.twig' %}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
 
-        {% block stylesheets %}
-            {% do assets.addCss('theme://css/normalize.css') %}
-            {% do assets.addCss('theme://css/foundation.css') %}
-            {% do assets.addCss('theme://css/app.css') %}
-        {% endblock %}
-        {{ assets.css() }}
-         <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
-         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    {% endblock %}
-</head>
-
-<body>
-    {% block header %}
-        {% include 'partials/header.html.twig' %}
-    {% endblock %}
-    {% block body %}
-        <div class="row">
-            {% block content %}
+            {% block stylesheets %}
+                {% do assets.addCss('theme://css/normalize.css') %}
+                {% do assets.addCss('theme://css/foundation.css') %}
+                {% do assets.addCss('theme://css/app.css') %}
             {% endblock %}
-        </div>
-    {% endblock %}
+            {{ assets.css() }}
+            <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        {% endblock %}
+    </head>
 
-{% block javascripts %}
-    {% do assets.add('jquery',101) %}
-    {% do assets.addCss('theme://js/foundation.min.js') %}
-{% endblock %}
-{{ assets.js() }}
+    <body>
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
+        {% block body %}
+            <div class="row main">
+                {% block content %}
+                {% endblock %}
+            </div>
+        {% endblock %}
 
-</body>
-</html>
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+            {% do assets.addCss('theme://js/foundation.min.js') %}
+        {% endblock %}
+        {{ assets.js() }}
+
+    </body>
+    </html>

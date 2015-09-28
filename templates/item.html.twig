@@ -11,10 +11,6 @@
   {% endif  %}
    
 	{% block content %}
-      {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
-        {% endif %}
-		
 			 {% include 'partials/blog_item.html.twig' with {'truncate':false,'big_header':true} %}
 	{% endblock %}
 

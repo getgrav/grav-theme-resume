@@ -2,12 +2,23 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  margin-top: 3rem;
+}
+.main {
+  margin-top: 8rem;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+}
+
+h4 {
+  font-weight: 400;
+  border-bottom: 2px dotted;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Row */
@@ -24,15 +35,23 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   padding-top: 3rem;
 }
-#header h1 {
-  margin-top: -0.65rem;
+#header h2 {
+  margin-top: -1.15rem;
 }
-.light {
+.website {
+  font-weight: 400;
+}
+
+/* Global formatiing */
+.light, p {
   color: #BCBEC0;
 }
 .italic {
   font-style: italic;
 }
-.website {
-  font-weight: 400;
+.title {
+  color: #231F20;
+}
+p {
+  font-weight: 300;
 }
