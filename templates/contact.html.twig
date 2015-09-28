@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+  <article class="post-2 page type-page status-publish hentry">
+    <header class="entry-header">
+      <h1>{{ page.header.title }}</h1>
+    </header>
+    <div class="entry-content">
+     {{ page.content }}
+
+     {% if config.plugins.simple_form.enabled %}
+      {% set simple_form_config = page.header.simple_form ?: config.themes.resume.simple_form %}
+        {{ simple_form(simple_form_config) }}
+      {% endif %}
+    </div>
+  </article>
+{% endblock %}

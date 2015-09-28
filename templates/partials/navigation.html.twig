@@ -1,0 +1,26 @@
+<nav id="site-navigation" class="main-navigation">
+    <div class="menu-demo-menu-container">
+        <ul id="menu-demo-menu" class="nav-menu">
+            {% for page in pages.children %}
+                {% if page.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+                        <li class="{{ current_page }}">
+                            <a href="{{ page.url }}">
+                                {{ page.menu }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% for mitem in site.menu %}
+                    <li>
+                        <a href="{{ mitem.link }}">
+                            {{ mitem.text }}
+                            {% if mitem.description %}
+                                <div class="menu-item-description">{{ mitem.description }}</div>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>          

@@ -1,0 +1,125 @@
+<article class="post type-post post-excerpt format-standard hentry {% if page.media.images %}has-post-thumbnail{% endif %}">
+
+<div class="post-thumbnail">
+        {{ page.media.images|first.cropZoom(1038,437).html(page.title, page.title, 'attachment-post-thumbnail wp-post-image') }}
+</div>
+
+    <header class="entry-header">
+        {% if page.header.link %}
+            <h2 class="entry-title">
+                {% if page.header.continue_link is not sameas(false) %}
+                    <a href="{{ page.url }}"></a>
+                {% endif %}
+                <a href="{{ page.header.link }}">{{ page.title }}</a>
+            </h2>
+            {% else %}
+            <h2 class="entry-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+        {% endif %}
+    </header>
+
+    <div class="entry-content">
+        {% if page.header.continue_link is sameas(false) %}
+            {{ page.content }}
+            {% if not truncate %}
+            {% set show_prev_next = true %}
+            {% endif %}
+        {% elseif truncate and page.summary != page.content %}
+           {{ page.summary }}
+            <a class="more-link" href="{{ page.url }}">{{ 'READ_MORE'|t }}</a>
+        {% elseif truncate %}
+            {{ page.content|truncate(550) }}
+            <a class="more-link" href="{{ page.url }}">{{ 'READ_MORE'|t }}</a>
+        {% else %}
+            {{ page.content }}
+            {% set show_prev_next = true %}
+        {% endif %}
+    </div>
+    
+    {% if not truncate %}
+        {% if page.header.author %}
+            <div class="author-info">
+                <h2 class="author-heading">
+                    {{ 'PUBLISHED_BY'|t }}
+                </h2>
+                <div class="author-avatar">
+                    {% if page.header.avatar %}
+                        {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
+                    {% endif %}
+
+                    {% if page.header.author or page.header.author_bio %}
+                        <div class="author-description">
+                         {% if page.header.author %}
+                            <h3 class="author-title">
+                                {{ page.header.author }}
+                            </h3>
+                        {% endif %}
+                        {% if page.header.author_bio %}
+                            <p class="author-bio">
+                               {{ page.header.author_bio }}
+                           </p>
+                       {% endif %}
+                   </div>
+               {% endif %}
+           </div>
+       {% endif %}
+       </div>
+   {% endif %}
+
+    <footer class="entry-footer">
+        <span class="posted-on">
+            <time class="entry-date published updated" datetime="{{ page.date|date('Y-m-d') }}">{{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} {{ page.date|date("m, Y") }}</time> 
+        </span>
+        {% if page.header.author %}
+            <span class="byline">
+                <span class="author vcard">
+                    {{ page.header.author }}
+                </span>
+            </span>
+        {% endif %}
+        {% if page.taxonomy.tag %}
+            <span class="tags-links">
+                {% for tag in page.taxonomy.tag %}
+                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{% if not loop.last %},{% endif %}</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+    </footer>
+</article>
+
+{% if show_prev_next %}
+{% if page.nextSibling.media.images %}
+<style type="text/css">
+.post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
+</style>
+{% endif %}
+{% if page.prevSibling.media.images %}
+<style type="text/css">
+.post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
+</style>
+{% endif %}
+
+<nav class="navigation post-navigation" role="navigation">
+    <h2 class="screen-reader-text">Post navigation</h2>
+    <div class="nav-links">
+        {% if not page.isLast %}
+            <div class="nav-previous" {% if page.prevSibling.media.images %}style="background-image: url({{ page.prevSibling.media.images|first.cropZoom(1038,437).url }}");{% endif %}>
+                <a href="{{ page.prevSibling.url }}" rel="prev">
+                    <span class="meta-nav" aria-hidden="true" {% if page.prevSibling.media.images %}style="color: #fff;"{% endif %}>{{ 'PREVIOUS'|t }}</span> 
+                    <span class="screen-reader-text">{{ 'PREVIOUS'|t }}</span> 
+                    <span class="post-title" {% if page.prevSibling.media.images %}style="color: #fff;"{% endif %}>{{ page.prevSibling.header.title }}</span>
+                </a>
+            </div>
+        {% endif %}
+        {% if not page.isFirst %}
+            <div class="nav-next" {% if page.nextSibling.media.images %}style="background-image: url({{ page.nextSibling.media.images|first.cropZoom(1038,437).url }}");{% endif %}>
+                <a href="{{ page.nextSibling.url }}" rel="next">
+                    <span class="meta-nav" aria-hidden="true" {% if page.nextSibling.media.images %}style="color: #fff;"{% endif %}>{{ 'NEXT'|t }}</span> 
+                    <span class="screen-reader-text">{{ 'NEXT'|t }}</span> 
+                    <span class="post-title" {% if page.nextSibling.media.images %}style="color: #fff;"{% endif %}>{{ page.header.title }}</span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</nav>
+{% endif %}
+

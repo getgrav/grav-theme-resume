@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        {% include 'partials/metadata.html.twig' %}
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+
+        {% block stylesheets %}
+            <link rel='stylesheet' id='resume-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+            <link rel='stylesheet' id='genericons-css'  href='{{ url('theme://genericons/genericons.css') }}' type='text/css' media='all' /> 
+            <link rel='stylesheet' id='resume-style-css'  href='{{ url('theme://css/style.css') }}' type='text/css' media='all' />
+
+            <!--[if lt IE 9]>
+            <link rel='stylesheet' id='resume-ie-css'  href='{{ url('theme://css/ie.css') }}' type='text/css' media='all' />
+            <![endif]-->
+            <!--[if lt IE 8]>
+            <link rel='stylesheet' id='resume-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
+            <![endif]-->
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+        {% endblock %}
+        {{ assets.js() }}
+
+        {% block color_scheme %}
+            {% if theme_config.current_preset and theme_config.current_preset != 'default' %}
+                {% include 'partials/color_scheme.html.twig' %}
+            {% endif %}
+        {% endblock %}
+
+    {% endblock %}
+</head>
+
+<body class="home blog">
+    <div id="page" class="hfeed site">
+    {% block sidebar %}
+        {% include 'partials/sidebar.html.twig' %}
+    {% endblock %}
+    {% block body %}
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+            </div>
+        </div>
+    {% endblock %}
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info">
+            <a href="http://getgrav.org/">{{ 'SITE.COPYRIGHT'|t("now"|date('Y')) }}</a>
+        </div>
+    </footer>
+
+</div>
+
+{% block javascripts_bottom %}
+    <script type='text/javascript'>
+    /* <![CDATA[ */
+    var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+    /* ]]> */
+    </script>
+
+    <!--[if lte IE 8]><script type='text/javascript' src='{{ url('theme://js/html5.js') }}'></script><![endif]-->
+    <script type='text/javascript' src='{{ url('theme://js/jquery-migrate.min.js') }}'></script>
+    <script type='text/javascript' src='{{ url('theme://js/functions.js') }}'></script>
+    <script type='text/javascript' src='{{ url('theme://js/skip-link-focus-fix.js') }}'></script>
+{% endblock %}
+        
+</body>
+</html>

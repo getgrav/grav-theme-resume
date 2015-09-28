@@ -1,0 +1,13 @@
+<nav id="social-navigation" class="social-navigation" role="navigation">
+  <div class="menu-social-links-container">
+    <ul id="menu-social-links" class="menu">
+      {% for item in site.social %}
+        <li id="menu-item-{{ loop.index }}" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181">
+          <a href="{{ item.url }}">
+            <span class="screen-reader-text">{{ item.text }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

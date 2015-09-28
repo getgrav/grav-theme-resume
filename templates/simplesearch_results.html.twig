@@ -1,0 +1,19 @@
+{% extends 'partials/simplesearch_base.html.twig' %}
+
+{% block content %}
+    <section class="no-results not-found">
+
+    <header class="page-header">
+        <h1 class="page-title">Query: <strong>{{ query }}</strong> found {{ search_results.count }} {{ 'result'|pluralize(search_results.count) }}</h1>
+    </header>
+
+    <div class="page-content">
+        {% include 'partials/simplesearch_searchbox.html.twig' %}
+
+    </div>
+
+    {% for page in search_results %}
+        {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+    {% endfor %}
+    </section>
+{% endblock %}

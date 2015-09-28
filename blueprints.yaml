@@ -1,0 +1,130 @@
+name: Resume
+version: 1.0.2
+description: "Resume is a Grav adaptation of most popular 2015 Wordpress theme."
+icon: group
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-resume
+demo: http://demo.getgrav.org/resume-skeleton
+keywords: resume, wordpress, theme, modern, fast, responsive, html5, css3, blog
+bugs: https://github.com/getgrav/grav-theme-resume/issues
+license: GPLv2 (or later)
+default_lang: en
+
+form:
+  validation: loose
+  fields:
+
+    default_lang:
+        type: text
+        size: small
+        label: Default lang
+        default: 'en'
+        validate:
+          type: text
+    current_preset:
+        type: select
+        label: Color Scheme
+        size: small
+        default: default
+        options:
+          default: Default
+          dark: Dark
+          yellow: Yellow
+          pink: Pink
+          purple: Purple
+          blue: Blue
+          custom: Custom
+        help: Set default color scheme. Set "default" for default scheme.
+    Custom:
+        type: section
+        title: Custom Color Scheme
+        underline: true  
+    background_color:
+        type: text
+        size: small
+        label: Background Color
+        default: "#f1f1f1"
+        validate:
+          type: text
+    header_background_color:
+        type: text
+        size: small
+        label: Header Background Color
+        default: "#ffffff"
+        validate:
+          type: text 
+    box_background_color:
+        type: text
+        size: small
+        label: Box Background Color
+        default: "#ffffff"
+        validate:
+          type: text 
+    textcolor:
+        type: text
+        size: small
+        label: Text Color
+        default: "#333333"
+        validate:
+          type: text 
+    secondary_textcolor:
+        type: text
+        size: small
+        label: Secondary Text Color
+        default: "#333333"
+        validate:
+          type: text 
+    border_color:
+        type: text
+        size: small
+        label: Border Color
+        default: "#333333"
+        validate:
+          type: text 
+    border_focus_color:
+        type: text
+        size: small
+        label: Border Focus Color
+        default: "#333333"
+        validate:
+          type: text 
+    sidebar_textcolor:
+        type: text
+        size: small
+        label: Sidebar Text Color
+        default: "#333333"
+        validate:
+          type: text 
+    sidebar_border_color:
+        type: text
+        size: small
+        label: Sidebar Border Color
+        default: "#f1f1f1"
+        validate:
+          type: text  
+    sidebar_border_focus_color:
+        type: text
+        size: small
+        label: Sidebar Border Focus Color
+        default: "#333333"
+        validate:
+          type: text      
+    secondary_sidebar_textcolor:
+        type: text
+        size: small
+        label: Secondary Sidebar Text Color
+        default: "#333333"
+        validate:
+          type: text                     
+    meta_box_background_color:
+        type: text
+        size: small
+        label: Meta Box Background Color
+        default: "#f1f1f1"
+        validate:
+          type: text  
+          
+
