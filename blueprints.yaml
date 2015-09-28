@@ -1,6 +1,6 @@
 name: Resume
 version: 1.0.2
-description: "Resume is a Grav adaptation of most popular 2015 Wordpress theme."
+description: "Resume is a Grav adaptation of Fernando Báez resume PSD theme."
 icon: group
 author:
   name: Team Grav
@@ -10,7 +10,7 @@ homepage: https://github.com/getgrav/grav-theme-resume
 demo: http://demo.getgrav.org/resume-skeleton
 keywords: resume, wordpress, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/getgrav/grav-theme-resume/issues
-license: GPLv2 (or later)
+license: MIT
 default_lang: en
 
 form:
