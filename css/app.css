@@ -57,6 +57,10 @@ p {
 }
 
 /* Specialities */
+.special {
+  height: 30rem;
+  margin-top: 5rem;
+}
 .special li {
   border: 1px solid;
   border-radius: 100%;
@@ -70,5 +74,25 @@ p {
   top: 10%;
   font-size: 4rem;
 }
+.special .pointer {
+  height: 12rem;
+  background-color: #000;
+  width: 1px;
+  position: relative;
+  left: 50%;
+}
+.special .pointer.second {
+  height: 15rem;
+}
 
-
+.special .ellipse {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #000;
+  border-radius: 100%;
+  position: relative;
+  right: 0.2rem;
+}
+.special .desc {
+  text-align: center;
+}
