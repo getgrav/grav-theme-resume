@@ -55,3 +55,20 @@ h4 {
 p {
   font-weight: 300;
 }
+
+/* Specialities */
+.special li {
+  border: 1px solid;
+  border-radius: 100%;
+  color: #222222;
+  width: 8rem;
+  height: 8rem;
+}
+.special i {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  font-size: 4rem;
+}
+
+

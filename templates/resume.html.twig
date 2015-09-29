@@ -14,17 +14,19 @@
 
   {% block content %}
     <div class="large-6 columns">
-      {% for child in collection %}
-        {% include 'partials/default.html.twig' with {'page':child, 'truncate':true} %}
+      {% for module in page.collection({'items':{'@taxonomy.category': 'left'},'order': {'by': 'default', 'dir': 'asc'}}) %}
+        {% if module.template %}
+          {% include 'left/' ~ module.template ~ '.html.twig' %}
+        {% endif %}
       {% endfor %}
     </div> 
 
     <div class="large-6 columns">
-    {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'default', 'dir': 'asc'}}) %}
-    {% if module.template %}
-        {% include 'right/' ~ module.template ~ '.html.twig' %}
-    {% endif %}
-{% endfor %}
+      {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'default', 'dir': 'asc'}}) %}
+        {% if module.template %}
+          {% include 'right/' ~ module.template ~ '.html.twig' %}
+        {% endif %}
+      {% endfor %}
      </div>
   {% endblock %}
 
