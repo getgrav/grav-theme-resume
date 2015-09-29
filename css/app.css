@@ -28,7 +28,7 @@ h4 {
 
 /* Border */
 .border-left {
-    border-left: 1px solid;
+  border-left: 1px solid;
 }
 
 /* Header */
@@ -60,23 +60,30 @@ p {
 .special {
   height: 30rem;
   margin-top: 5rem;
+  padding-left: 1rem;
 }
 .special li {
   border: 1px solid;
   border-radius: 100%;
-  color: #222222;
-  width: 8rem;
-  height: 8rem;
+  color: #58585A;
+  width: 10rem;
+  height: 10rem;
+  margin-left: -0.625rem;
 }
+@media only screen and (max-width: 40em) {
+  .special li {
+    margin-bottom: 4rem !important;
+  }
+} 
 .special i {
   text-align: center;
   position: relative;
   top: 10%;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .special .pointer {
   height: 12rem;
-  background-color: #000;
+  background-color: #58585A;
   width: 1px;
   position: relative;
   left: 50%;
@@ -84,15 +91,23 @@ p {
 .special .pointer.second {
   height: 15rem;
 }
-
-.special .ellipse {
+.special .pointer:before {
   width: 0.6rem;
   height: 0.6rem;
-  background-color: #000;
+  background-color: #58585A;
   border-radius: 100%;
   position: relative;
   right: 0.2rem;
+  content: "";
+  display: block;
 }
 .special .desc {
   text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
 }
+@media only screen and (max-width: 40em) {
+  .special .desc {
+    margin-top: 3rem;
+  }
+} 
