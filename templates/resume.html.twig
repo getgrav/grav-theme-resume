@@ -14,7 +14,7 @@
 
   {% block content %}
     <div class="large-6 columns">
-      {% for module in page.collection({'items':{'@taxonomy.category': 'left'},'order': {'by': 'default', 'dir': 'asc'}}) %}
+      {% for module in page.collection({'items':{'@taxonomy.category': 'left'},'order': {'by': 'date', 'dir': 'desc'}}) %}
         {% if module.template %}
           {% include 'left/' ~ module.template ~ '.html.twig' %}
         {% endif %}
@@ -22,7 +22,7 @@
     </div> 
 
     <div class="large-6 columns">
-      {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'default', 'dir': 'asc'}}) %}
+      {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'date', 'dir': 'desc'}}) %}
         {% if module.template %}
           {% include 'right/' ~ module.template ~ '.html.twig' %}
         {% endif %}

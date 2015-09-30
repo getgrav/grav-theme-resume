@@ -61,6 +61,7 @@ p {
   height: 26rem;
   margin-top: 5rem;
   padding-left: 1rem;
+  overflow: visible;
 }
 @media only screen and (max-width: 40em) {
   .special {

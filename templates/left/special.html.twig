@@ -5,7 +5,7 @@
 {% for row in module.header.specialities|batch(3) %}
   <ul class="inline-list special {% if loop.first %}first{% endif %} {% if loop.last %}last{% endif %}">
     {% for item in row %}
-      <li>
+      <li {% if item.animation %}class="animated {{ item.animation }}{% endif %}">
         <i class="fi-{{ item.icon }}"></i>
         <div class="pointer hide-for-small-only {% if loop.index == 2 %}second{% endif %}"></div>
         <div class="desc">{{ item.text }}</div>
