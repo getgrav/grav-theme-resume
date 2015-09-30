@@ -58,10 +58,15 @@ p {
 
 /* Specialities */
 .special {
-  height: 30rem;
+  height: 26rem;
   margin-top: 5rem;
   padding-left: 1rem;
 }
+@media only screen and (max-width: 40em) {
+  .special {
+    height: auto;
+  }
+} 
 .special li {
   border: 1px solid;
   border-radius: 100%;
@@ -69,6 +74,9 @@ p {
   width: 10rem;
   height: 10rem;
   margin-left: -0.625rem;
+}
+.special.last {
+    margin-bottom: 5rem
 }
 @media only screen and (max-width: 40em) {
   .special li {

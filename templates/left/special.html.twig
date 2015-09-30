@@ -2,20 +2,14 @@
 
 {{ module.content }}
 
-<ul class="inline-list special">
-  <li>
-    <i class="fi-home"></i>
-    <div class="pointer hide-for-small-only"></div>
-    <div class="desc">Logo Design</div>
-  </li>
-  <li>
-    <i class="fi-bookmark"></i>
-    <div class="pointer second hide-for-small-only"></div>
-    <div class="desc">Logo Design</div>
-  </li>
-  <li>
-    <i class="fi-info"></i>
-    <div class="pointer hide-for-small-only"></div>
-    <div class="desc">Logo Design</div>
-  </li>
-</ul>
+{% for row in module.header.specialities|batch(3) %}
+  <ul class="inline-list special {% if loop.first %}first{% endif %} {% if loop.last %}last{% endif %}">
+    {% for item in row %}
+      <li>
+        <i class="fi-{{ item.icon }}"></i>
+        <div class="pointer hide-for-small-only {% if loop.index == 2 %}second{% endif %}"></div>
+        <div class="desc">{{ item.text }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
