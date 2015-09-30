@@ -5,7 +5,8 @@ body {
   margin-top: 3rem;
 }
 .main {
-  margin-top: 8rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 /* Headings */
@@ -17,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 h4 {
   font-weight: 400;
   border-bottom: 2px dotted;
+  padding-top: 4rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -76,9 +78,6 @@ p {
   width: 10rem;
   height: 10rem;
   margin-left: -0.625rem;
-}
-.special.last {
-    margin-bottom: 5rem
 }
 @media only screen and (max-width: 40em) {
   .special li {
@@ -140,4 +139,13 @@ p {
 }
 .ellipses li span.grey {
   background: #D1D2D4;
+}
+
+/* Language Skills */
+ul[data-graph] li:nth-child(1) {
+  color: #58585A;
+}
+
+ul[data-graph] li:nth-child(2) {
+  color: #D1D2D4;
 }

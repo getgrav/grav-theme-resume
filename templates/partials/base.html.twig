@@ -18,10 +18,11 @@
                 {% do assets.addCss('theme://css/foundation.css') %}
                 {% do assets.addCss('theme://icons/foundation-icons.css') %}
                 {% do assets.addCss('theme://css/animate.css') %}
+                {% do assets.addCss('theme://css/pizza.css') %}
                 {% do assets.addCss('theme://css/app.css') %}
             {% endblock %}
             {{ assets.css() }}
-            
+
         {% endblock %}
     </head>
 
@@ -38,9 +39,13 @@
 
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
-            {% do assets.addCss('theme://js/foundation.min.js') %}
+            {% do assets.addJs('theme://js/foundation.min.js') %}
+            {% do assets.addJs('theme://js/vendor/snap.svg.js') %}
+            {% do assets.addJs('theme://js/pizza.js') %}
         {% endblock %}
         {{ assets.js() }}
+
+        <script type="text/javascript">Pizza.init();</script>
 
     </body>
     </html>
