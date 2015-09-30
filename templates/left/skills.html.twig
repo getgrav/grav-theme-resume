@@ -3,12 +3,11 @@
 {{ module.content }}
 
 <div class="row design">
-  <div class="large-7 columns">
-    <h6>01 Computer</h6>
-    
-    {% for item in module.header.skills %}
+  <div class="large-7 columns {% if module.header.column1_animation %}animated {{ module.header.column1_animation }}{% endif %}">
+    <h6>{{ module.header.column1_name }}</h6>
+    {% for item in module.header.column1 %}
       <ul class="small-block-grid-2">
-        <li>{{ item.name }}</li>
+        <li class="name">{{ item.name }}</li>
         <li>
           <ul class="small-block-grid-8 ellipses">
             {% for i in 1..8 %}
@@ -18,16 +17,11 @@
         </li>
       </ul>
     {% endfor %}
-
-    
   </div>
-  <div class="large-5 columns">
-    <h6>02 Knowledge</h6>
-    <ul class="inline-list">
-      <li>Something & Another whoop</li>
-      <li>Something & Another whoop</li>
-      <li>Something & Another whoop</li>
-      <li>Something & Another whoop</li>
-    </ul>
+  <div class="large-5 columns {% if module.header.column2_animation %}animated {{ module.header.column2_animation }}{% endif %}">
+    <h6>{{ module.header.column2_name }}</h6>
+      {% for item in module.header.column2 %}
+    <div class="name">{{ item.name }}</div>
+      {% endfor %}
   </div>
 </div>

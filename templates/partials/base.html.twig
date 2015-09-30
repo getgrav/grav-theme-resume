@@ -10,6 +10,9 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
 
+            <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
             {% block stylesheets %}
                 {% do assets.addCss('theme://css/normalize.css') %}
                 {% do assets.addCss('theme://css/foundation.css') %}
@@ -18,8 +21,7 @@
                 {% do assets.addCss('theme://css/app.css') %}
             {% endblock %}
             {{ assets.css() }}
-            <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
-            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+            
         {% endblock %}
     </head>
 

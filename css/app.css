@@ -43,14 +43,14 @@ h4 {
 }
 
 /* Global formatiing */
-.light, p {
-  color: #BCBEC0;
+.light, p, .name {
+  color: #888888;
 }
 .italic {
   font-style: italic;
 }
 .title {
-  color: #231F20;
+  color: #232323;
 }
 p {
   font-weight: 300;
@@ -66,6 +66,7 @@ p {
 @media only screen and (max-width: 40em) {
   .special {
     height: auto;
+    overflow: hidden;
   }
 } 
 .special li {
@@ -122,8 +123,15 @@ p {
 } 
 
 /* Skills */
+.design .small-block-grid-2 li {
+  padding-bottom: 0;
+}
+.design h6 {
+  font-style: italic;
+}
 .ellipses li span {
-  padding: 0.5rem;
+  width: 1rem;
+  height: 1rem;
   margin-right: 0.3rem;
   background: #58585A;
   border-radius: 100%;
