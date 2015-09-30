@@ -120,3 +120,16 @@ p {
     margin-top: 3rem;
   }
 } 
+
+/* Skills */
+.ellipses li span {
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+  background: #58585A;
+  border-radius: 100%;
+  display: block;
+  margin-top: 0.2rem;
+}
+.ellipses li span.grey {
+  background: #D1D2D4;
+}

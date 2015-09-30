@@ -1,0 +1,33 @@
+<h4>{{ module.header.title }}</h4>
+
+{{ module.content }}
+
+<div class="row design">
+  <div class="large-7 columns">
+    <h6>01 Computer</h6>
+    
+    {% for item in module.header.skills %}
+      <ul class="small-block-grid-2">
+        <li>{{ item.name }}</li>
+        <li>
+          <ul class="small-block-grid-8 ellipses">
+            {% for i in 1..8 %}
+              <li><span {% if i > item.level %}class="grey"{% endif %}></span></li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    {% endfor %}
+
+    
+  </div>
+  <div class="large-5 columns">
+    <h6>02 Knowledge</h6>
+    <ul class="inline-list">
+      <li>Something & Another whoop</li>
+      <li>Something & Another whoop</li>
+      <li>Something & Another whoop</li>
+      <li>Something & Another whoop</li>
+    </ul>
+  </div>
+</div>
