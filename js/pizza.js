@@ -4,9 +4,9 @@ var Pizza = {
   settings : {
     donut: false,
     donut_inner_ratio: 0.4,   // between 0 and 1
-    percent_offset: 35,       // relative to radius
-    show_text: true,       // show or hide the percentage on the chart.
-    animation_speed: 500,
+    percent_offset: 30,       // relative to radius
+    show_text: false,       // show or hide the percentage on the chart.
+    animation_speed: 200,
     always_show_text: false,
     show_grid: false,
     bar_spacer: 100,

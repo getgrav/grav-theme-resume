@@ -152,10 +152,14 @@ path[data-id="s0"] {
   stroke-width: 10;
   stroke: #fff;
 }
+.nostroke path[data-id="s0"] {
+  stroke-width: 0;
+}
+
 .pie_desc {
   position: absolute;
   top: 6rem;
-  left: 3.2rem;
+  left: 2.2rem;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -166,6 +170,7 @@ path[data-id="s0"] {
 }
 .lang_info {
   text-align: center;
+  width: 7.4rem;
 }
 .lang_name {
   color: #232323;

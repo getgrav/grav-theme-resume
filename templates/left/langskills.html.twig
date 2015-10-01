@@ -3,40 +3,20 @@
 {{ module.content }}
 
 <div class="row">
-  <div class="large-4 columns">
-    <ul data-pie-id="lang1" class="pie_desc">
-      <li data-value="36" fill="#000">
-        <div class="lang_info">
-          <span class="lang_name">English</span>
-          <span class="lang_level">Advanced Level</span>
-        </div>
-      </li>
-      <li data-value="74"></li>
-    </ul>
-    <div id="lang1" class="pie"></div>
-  </div>
-  <div class="large-4 columns">
-    <ul data-pie-id="lang2" class="pie_desc">
-      <li data-value="36" fill="#000">
-        <div class="lang_info">
-          <span class="lang_name">Spanish</span>
-          <span class="lang_level">Mother Language</span>
-        </div>
-      </li>
-      <li data-value="74"></li>
-    </ul>
-    <div id="lang2" class="pie"></div>
-  </div>
-  <div class="large-4 columns">
-    <ul data-pie-id="lang3" class="pie_desc">
-      <li data-value="36" fill="#000">
-        <div class="lang_info">
-          <span class="lang_name">French</span>
-          <span class="lang_level">Basic Level</span>
-        </div>
-      </li>
-      <li data-value="74"></li>
-    </ul>
-    <div id="lang3" class="pie"></div>
-  </div>
+  {% for item in module.header.languages %}
+    <div class="large-4 columns">
+      <ul data-pie-id="lang{{loop.index}}" class="pie_desc" {% if item.level == 100 %}data-options='{"donut_inner_ratio":"0.8"}'{% endif %}>
+        <li data-value="{{ item.level }}">
+          <div class="lang_info">
+            <span class="lang_name">{{ item.name }}</span>
+            <span class="lang_level">{{ item.level_name }}</span>
+          </div>
+        </li>
+        {% if item.level != 100 %}
+        <li data-value="{{ 100 - item.level }}"></li>
+        {% endif %}
+      </ul>
+      <div id="lang{{loop.index}}" class="pie {% if item.level == 100 %}nostroke{% endif %}"></div>
+    </div>
+  {% endfor %}
 </div>
