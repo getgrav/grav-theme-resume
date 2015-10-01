@@ -142,10 +142,37 @@ p {
 }
 
 /* Language Skills */
-ul[data-graph] li:nth-child(1) {
-  color: #58585A;
+path[data-id="s1"] {
+  fill: #D1D2D4;
+  stroke: #fff;
+  stroke-width: 10;
 }
-
-ul[data-graph] li:nth-child(2) {
-  color: #D1D2D4;
+path[data-id="s0"] {
+  fill: #58585A;
+  stroke-width: 10;
+  stroke: #fff;
+}
+.pie_desc {
+  position: absolute;
+  top: 6rem;
+  left: 3.2rem;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.pie {
+  width: 14rem;
+  height: 14rem;
+  margin-left: -2.5rem;
+}
+.lang_info {
+  text-align: center;
+}
+.lang_name {
+  color: #232323;
+  display: block;
+}
+.lang_level {
+  color: #888888;
+  font-size: 80%;
+  display: block;
 }

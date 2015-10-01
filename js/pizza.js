@@ -8,10 +8,10 @@ var Pizza = {
     show_text: true,       // show or hide the percentage on the chart.
     animation_speed: 500,
     always_show_text: false,
-    show_grid: true,
+    show_grid: false,
     bar_spacer: 100,
     bar_intervals: 6,
-    animation_type: 'elastic' // options: backin, backout, bounce, easein, 
+    animation_type: 'bounce' // options: backin, backout, bounce, easein, 
                               //          easeinout, easeout, linear
   },
 

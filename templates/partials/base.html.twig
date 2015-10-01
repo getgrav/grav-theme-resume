@@ -45,7 +45,13 @@
         {% endblock %}
         {{ assets.js() }}
 
-        <script type="text/javascript">Pizza.init();</script>
+        <script type="text/javascript">
+        Pizza.init(document.body, {
+            show_text: false,
+            donut: true,
+            donut_inner_ratio: 0.7,  
+        });
+        </script>
 
     </body>
     </html>
