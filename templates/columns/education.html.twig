@@ -2,24 +2,16 @@
 
 {{ module.content }}
 
+{% if module.header.education %}
 <div class="edu_surround">
-  <div class="edu">
-    <div class="edu_item">
-      <div class="date">From September 2010 to September 2013</div>
-      <div class="topic">Industrial Design</div>
-      <div class="school">Universidad Antonio de Nebrija. Madrid.</div>
-    </div>
-
-    <div class="edu_item">
-      <div class="date">From September 2010 to September 2013</div>
-      <div class="topic">Industrial Design</div>
-      <div class="school">Universidad Antonio de Nebrija. Madrid.</div>
-    </div>
-
-    <div class="edu_item">
-      <div class="date">From September 2010 to September 2013</div>
-      <div class="topic">Industrial Design</div>
-      <div class="school">Universidad Antonio de Nebrija. Madrid.</div>
-    </div>
+  <div class="edu animated">
+    {% for item in module.header.education %}
+      <div class="edu_item">
+        <div class="date">{{ item.date }}</div>
+        <div class="topic">{{ item.topic }}</div>
+        <div class="school">{{ item.school }}</div>
+      </div>
+    {% endfor %}
   </div>
-</div>
+</div>  
+{% endif %}
