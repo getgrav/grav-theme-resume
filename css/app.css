@@ -235,3 +235,38 @@ path[data-id="s0"] {
   left: -0.4rem;
   margin-top: 2rem;
 }
+.edu .topic {
+  color: #6D6E71;
+}
+
+/* Experience */
+.experience {
+  position: relative;
+  padding-top: 4em;
+}
+.experience .year {
+  font-size: 10rem;
+  font-weight: 400;
+  color: #58585A;
+}
+.date {
+  color: #58585A;
+}
+.role {
+  color: #6D6E71;
+}
+.company {
+  color: #58585A;
+}
+.experience .data {
+  vertical-align: bottom;
+}
+.experience .year {
+  vertical-align: top;
+  line-height: 0;
+}
+
+.experience table {
+  border: 0 none;
+  background: none;
+}
