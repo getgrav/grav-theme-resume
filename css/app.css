@@ -242,12 +242,15 @@ path[data-id="s0"] {
 /* Experience */
 .experience {
   position: relative;
-  padding-top: 4em;
 }
 .experience .year {
   font-size: 10rem;
   font-weight: 400;
   color: #58585A;
+}
+.exp_data {
+  margin-top: 7.2rem;
+  white-space: nowrap;
 }
 .date {
   color: #58585A;
@@ -258,15 +261,7 @@ path[data-id="s0"] {
 .company {
   color: #58585A;
 }
-.experience .data {
-  vertical-align: bottom;
-}
-.experience .year {
-  vertical-align: top;
-  line-height: 0;
-}
-
-.experience table {
-  border: 0 none;
-  background: none;
+.year {
+  float: left;
+  padding-right: 1rem;
 }
