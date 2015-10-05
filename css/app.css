@@ -46,6 +46,9 @@ h4 {
 .website {
   font-weight: 400;
 }
+.website a {
+  color: #222;
+}
 
 /* Global formatiing */
 .light, p, .name {
@@ -329,7 +332,7 @@ img.ribbon {
   margin-bottom: 0.5rem;
 }
 .footer p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 .footer a {
   color: #888888;
