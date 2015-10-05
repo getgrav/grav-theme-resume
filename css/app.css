@@ -319,3 +319,19 @@ img.ribbon {
   font-size: 3rem;
   color: #58585A;
 }
+
+/* Footer */
+.footer .border {
+  width: 2rem;
+  height: 1px;
+  margin: 0 auto;
+  background: #BDBEC0;
+  margin-bottom: 0.5rem;
+}
+.footer p {
+    font-size: 0.9rem;
+}
+.footer a {
+  color: #888888;
+  text-decoration: underline;
+}

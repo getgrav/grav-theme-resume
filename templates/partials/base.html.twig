@@ -37,6 +37,10 @@
             </div>
         {% endblock %}
 
+         {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
             {% do assets.addJs('theme://js/foundation.min.js') %}
