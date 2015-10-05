@@ -278,6 +278,9 @@ path[data-id="s0"] {
 /* Recognitions */
 img.ribbon {
   margin-bottom: 1rem;
+  width: 100px !important;
+  height: 131px !important;
+  max-width: 100px;
 }
 .recognitions .position {
   position: relative;
@@ -285,6 +288,8 @@ img.ribbon {
   top: 6.5rem;
   text-align: center;
 }
+
+
 .recog_data {
   padding-top: 3rem;
 }

@@ -4,7 +4,7 @@
 
 <div class="row experience">
   {% for item in module.header.experience %}
-    <div class="large-6 medium-12 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+    <div class="large-6 medium-6 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
       <div class="year">{{ item.years }}</div>
       <div class="exp_data">   
         <div class="date">{{ item.date }}</div>

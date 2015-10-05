@@ -4,7 +4,7 @@
 
 <div class="row lang">
   {% for item in module.header.languages %}
-    <div class="large-4 small-6 columns">
+    <div class="large-4 medium-4 small-6 columns">
       <ul data-pie-id="lang{{loop.index}}" class="pie_desc" {% if item.level == 100 %}data-options='{"donut_inner_ratio":"0.8"}'{% endif %}>
         <li data-value="{{ item.level }}">
           <div class="lang_info">
