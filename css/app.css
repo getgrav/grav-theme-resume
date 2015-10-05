@@ -32,6 +32,9 @@ h4 {
 .border-left {
   border-left: 1px solid;
 }
+.border-left ul {
+  margin-bottom: 0;
+}
 
 /* Header */
 #header {
@@ -47,6 +50,9 @@ h4 {
 /* Global formatiing */
 .light, p, .name {
   color: #888888;
+}
+.light2 {
+  color: #BDBEC0;
 }
 .italic {
   font-style: italic;
@@ -264,4 +270,52 @@ path[data-id="s0"] {
 .year {
   float: left;
   padding-right: 1rem;
+}
+
+/* Recognitions */
+img.ribbon {
+  margin-bottom: 1rem;
+}
+.recognitions .position {
+  position: relative;
+  width: 100px;
+  top: 6.5rem;
+  text-align: center;
+}
+.recog_data {
+  padding-top: 3rem;
+}
+.title {
+  color: #58585A;
+}
+.desc {
+  color: #6D6E71;
+}
+.place {
+  color: #58585A;
+}
+
+/* Hobbies & Interests */
+.interests {
+  padding-top: 2em;
+}
+.int_icon {
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid #C1C2C4;
+  border-radius: 100%;
+  margin-bottom: 1.5rem;
+}
+.activity {
+  text-align: center;
+  color: #58585A;
+}
+.int_icon i {
+  padding-top: 1.4rem;
+  display: block;
+  text-align: center;
+}
+.int_icon i:before {
+  font-size: 3rem;
+  color: #58585A;
 }
