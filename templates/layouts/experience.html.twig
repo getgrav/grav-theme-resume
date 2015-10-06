@@ -1,0 +1,16 @@
+<h4>{{ module.header.title }}</h4>
+
+{{ module.content }}
+
+<div class="row experience">
+  {% for item in module.header.experience %}
+    <div class="large-6 medium-6 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+      <div class="year">{{ item.years }}</div>
+      <div class="exp_data">   
+        <div class="date">{{ item.date }}</div>
+        <div class="role">{{ item.role }}</div>
+        <div class="company">{{ item.company }}</div>
+      </div> 
+    </div> 
+  {% endfor %}
+</div>

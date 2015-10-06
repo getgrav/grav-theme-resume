@@ -1,0 +1,17 @@
+<h4>{{ module.header.title }}</h4>
+
+{{ module.content }}
+
+{% if module.header.education %}
+<div class="edu_surround">
+  <div class="edu animated">
+    {% for item in module.header.education %}
+      <div class="edu_item">
+        <div class="date">{{ item.date }}</div>
+        <div class="topic">{{ item.topic }}</div>
+        <div class="school">{{ item.school }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>  
+{% endif %}

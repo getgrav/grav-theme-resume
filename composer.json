@@ -1,0 +1,28 @@
+{
+    "name": "getgrav/grav-theme-resume",
+    "type": "grav-theme",
+    "description": "Resume is a Grav adaptation of Fernando Báez resume PSD theme.",
+    "keywords": ["theme","grav", "resume"],
+    "homepage": "http://getgrav.org",
+    "license": "GPLv2 (or later)",
+    "support": {
+        "irc": "irc://irc.freenode.org/grav"
+    },
+    "authors": [
+        {
+            "name": "Team Grav",
+            "email": "devs@getgrav.org",
+            "homepage": "http://getgrav.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "resume",
+        "installer-paths": {
+            "user/themes/{$name}/": ["getgrav/grav-theme-resume"]
+        }
+    }
+}

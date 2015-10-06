@@ -1,0 +1,22 @@
+<h4>{{ module.header.title }}</h4>
+
+{{ module.content }}
+
+<div class="row lang">
+  {% for item in module.header.languages %}
+    <div class="large-4 medium-4 small-6 columns">
+      <ul data-pie-id="lang{{loop.index}}" class="pie_desc" {% if item.level == 100 %}data-options='{"donut_inner_ratio":"0.8"}'{% endif %}>
+        <li data-value="{{ item.level }}">
+          <div class="lang_info">
+            <span class="lang_name">{{ item.name }}</span>
+            <span class="lang_level">{{ item.level_name }}</span>
+          </div>
+        </li>
+        {% if item.level != 100 %}
+        <li data-value="{{ 100 - item.level }}"></li>
+        {% endif %}
+      </ul>
+      <div id="lang{{loop.index}}" class="pie {% if item.level == 100 %}nostroke{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}"></div>
+    </div>
+  {% endfor %}
+</div>

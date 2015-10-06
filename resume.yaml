@@ -1,0 +1,9 @@
+enabled: true
+current_preset: default
+
+streams:
+  scheme:
+    theme:
+      type: ReadOnlyStream
+      paths:
+        - user/themes/resume
