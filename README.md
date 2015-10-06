@@ -105,20 +105,20 @@ specialities:
 ```
 Here's quick explanation:
 
-```
+```markdown
  - icon: lightbulb
 ```
 
 You can select icon from around 300 included font icons. Icon list available  [here](http://zurb.com/playground/foundation-icon-fonts-3).
 
 
-```
+```markdown
 text: Logo Design
 ```
 
 Description of your speciality.
 
-```
+```markdown
 animation: fadeInDown
 ```
 
@@ -127,6 +127,16 @@ You can animate each element. Check available animations [here](https://daneden.
 ## Skills
 
 Skills layout is designed to showcase your most important skills. To check example page, go to: **user/pages/left/design-skills/skills.md**. 
+
+```markdown
+column1:
+  - name: Adobe Photoshop
+    level: 8
+```
+
+**name** - your skill name
+**level** - skill level from 1-8. For example if you specify **5** that means theme will display 5 dark circles and 3 greyed out. 
+
 
 
 
