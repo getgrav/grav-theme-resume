@@ -89,9 +89,9 @@ Header settings are located inside your  **user/config/site.yaml**. Inside this 
 
 ## Specialities
 
-Specialities layout is designed to help you present your most important talents. It contains large icon inside ellipse and description. Example of specialities layout is located inside **user/pages/left/my-specialities/special.md**.
+Specialities layout is designed to showcase your most important talents. It contains large icon inside ellipse and description. Example of specialities layout is located inside **user/pages/left/my-specialities/special.md**. 
 
-```
+```markdown
 specialities:
     - icon: lightbulb
       text: Logo Design
@@ -109,7 +109,7 @@ Here's quick explanation:
  - icon: lightbulb
 ```
 
-You can select icon from around 300 included font icons. See whole list  [here](http://zurb.com/playground/foundation-icon-fonts-3).
+You can select icon from around 300 included font icons. Icon list available  [here](http://zurb.com/playground/foundation-icon-fonts-3).
 
 
 ```
@@ -122,4 +122,13 @@ Description of your speciality.
 animation: fadeInDown
 ```
 
-You can animate each element. You can check available animations [here](https://daneden.github.io/animate.css/).
+You can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+
+## Skills
+
+Skills layout is designed to showcase your most important skills. To check example page, go to: **user/pages/left/design-skills/skills.md**. 
+
+
+
+
+
