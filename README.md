@@ -81,7 +81,7 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 # Layouts Configuration
 
-Resume theme includes few creative layout templates. This layouts will help you create perfect resume and find a dream job :) Below, is a brief description of most important layouts. 
+Resume theme includes few creative layout templates. This layouts will help you to create perfect resume and to find a dream job :) Below, is a brief description of most important layouts, it's options and values. 
 
 ## Header
 
