@@ -135,6 +135,7 @@ column1:
 ```
 
 **name** - your skill name
+
 **level** - skill level from 1-8. For example if you specify **5** that means theme will display 5 dark circles and 3 greyed out. 
 
 
