@@ -107,9 +107,19 @@ Here's quick explanation:
 
 ```
  - icon: lightbulb
- ```
+```
 
 You can select icon from around 300 included font icons. See whole list  [here](http://zurb.com/playground/foundation-icon-fonts-3).
 
 
+```
+text: Logo Design
+```
 
+Description of your speciality.
+
+```
+animation: fadeInDown
+```
+
+You can animate each element. You can check available animations [here](https://daneden.github.io/animate.css/).
