@@ -79,7 +79,7 @@ If you want to set Resume as the default theme, you can do so by following these
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **resume** folder.
 
-# Layouts Configurations
+# Layouts Configuration
 
 Resume theme includes few layout templates to help you present your skills and abilities. Below, is a small explanation of most important ones. 
 
@@ -103,3 +103,13 @@ specialities:
       text: Minimal Web Design
       animation: fadeInLeft
 ```
+Here's quick explanation:
+
+```
+ - icon: lightbulb
+ ```
+
+You can select icon from around 300 included font icons. See whole list  [here](http://zurb.com/playground/foundation-icon-fonts-3).
+
+
+
