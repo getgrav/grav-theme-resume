@@ -78,3 +78,28 @@ If you want to set Resume as the default theme, you can do so by following these
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **resume** folder.
+
+# Layouts Configurations
+
+Resume theme includes few layout templates to help you present your skills and abilities. Below, is a small explanation of most important ones. 
+
+## Header
+
+Header settings are located inside your  **user/config/site.yaml**. Inside this file you can specify your basic contact settings. These informations will be displayed in theme header. 
+
+## Specialities
+
+Specialities layout is designed to help you present your most important talents. It contains large icon inside ellipse and description. Example of specialities layout is located inside **user/pages/left/my-specialities/special.md**.
+
+```
+specialities:
+    - icon: lightbulb
+      text: Logo Design
+      animation: fadeInDown
+    - icon: page-multiple
+      text: Branding 
+      animation: fadeInUp
+    - icon: results
+      text: Minimal Web Design
+      animation: fadeInLeft
+```
