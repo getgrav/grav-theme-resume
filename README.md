@@ -89,41 +89,25 @@ Header settings are located inside your [skeleton](https://github.com/getgrav/gr
 
 ## Specialities
 
-Specialities layout is designed to showcase your most important talents. It contains large icon inside ellipse and description. Example of specialities layout is located inside **pages/left/my-specialities/special.md**. 
+Specialities layout is designed to showcase your most important talents. It contains large icon inside ellipse and description. Example of specialities layout is located inside your [skeleton](https://github.com/getgrav/grav-skeleton-resume-site) in **pages/left/my-specialities/special.md**. 
 
 ```markdown
- - icon: lightbulb
-   text: Logo Design
-   animation: fadeInDown
-```
-Here's quick explanation:
-
-```markdown
- - icon: lightbulb
+- icon: lightbulb
+  text: Logo Design
+  animation: fadeInDown
 ```
 
-You can select icon from around 300 included font icons. Icon list available  [here](http://zurb.com/playground/foundation-icon-fonts-3).
-
-
-```markdown
-text: Logo Design
-```
-
-Description of your speciality.
-
-```markdown
-animation: fadeInDown
-```
-
-You can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+* **icon** - select icon from around 300 included font icons. Icon list is available [here](http://zurb.com/playground/foundation-icon-fonts-3).
+* **text** - description of your speciality.
+* **animation** - you can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
 
 ## Skills
 
 Skills layout is designed to showcase your most important skills. To check example page, go to [skeleton](https://github.com/getgrav/grav-skeleton-resume-site) and open: **pages/left/design-skills/skills.md**. 
 
 ```markdown
-  - name: Adobe Photoshop
-    level: 8
+- name: Adobe Photoshop
+  level: 8
 ```
 * **name** - your skill name
 * **level** - skill level from 1-8. For example if you specify **5** that means theme will display 5 dark circles and 3 circles will be greyed out. 
@@ -134,17 +118,17 @@ Language skills layout was made to easily display percentage data like language 
 Example language skills page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/left/language-skills/langskills.md**. 
 
 ```markdown
-  - name: Spanish
-    level_name: Mother Language
-    level: 100
+- name: Spanish
+  level_name: Mother Language
+  level: 100
 ```
 * **name** - your pie chart name 
 * **level_name** - pie chart description
-* **level** - percentage to display ie: if you set that field to 50 then half of pie chart will be dark and half greyed out.
-* **animation** - You can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+* **level** - percentage to display, ie: if you set that field to 50 then half of pie chart will be dark and half greyed out.
+* **animation** - you can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
 
 ## Education
-This layout is designed to show your education history. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/education/education.md**
+This layout is designed to present your education history. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/education/education.md**
 
 ```markdown
 - date: From September 2010 to September 2013.
@@ -158,7 +142,7 @@ This layout is designed to show your education history. Example page is located 
 
 ## Experience
 
-Experience layout is designed to showcase your work experience. It's designed with two columns approach. One for year, one for description. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/experience/experience.md**
+Experience layout is designed to showcase your work experience. It's created with two columns approach. One for year, one for description. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/experience/experience.md**
 
 ```markdown
 - date: From 2013 to 2014
@@ -168,14 +152,14 @@ Experience layout is designed to showcase your work experience. It's designed wi
   animation: fadeIn
 ``` 
 * **date** - provide date
-* **role** - your role
+* **role** - your role in company
 * **company** - company 
 * **years** - years to showcase in first column with enlarged font
-* **animation** - You can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+* **animation** - you can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
 
 ## Recognitions
 
-Recognitions layout is designed to showcase your awards and recognitions. On left there is SVG ribbon with achieved place and amount of finalists. On the right informations about contests. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/recognitions/recognitions.md**
+Recognitions layout is designed to showcase your awards and recognitions. On left there is SVG ribbon with achieved place and amount of finalists. On the right, informations about contest. Example page is located in [skeleton](https://github.com/getgrav/grav-skeleton-resume-site), in: **pages/right/recognitions/recognitions.md**
 
 ```markdown
 - title: Remus Logo Design.
@@ -188,7 +172,7 @@ Recognitions layout is designed to showcase your awards and recognitions. On lef
 * **desc** - contest description
 * **place** - place where contest took place
 * **position** - achieved position
-* **animation** - You can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+* **animation** - you can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
 
 ## Hobbies and Interests
 
@@ -203,3 +187,6 @@ Interests layout is designed to show your hobbies and interests. It's approach i
 * **icon** - select icon from around 300 bundled font icons. List is available  [here](http://zurb.com/playground/foundation-icon-fonts-3).
 * **activity** - icon description
 * **animation** - you can animate each element. Check available animations [here](https://daneden.github.io/animate.css/).
+
+## Footer
+Footer and it's content is located inside **partials** directory. File name is **footer.html.twig**.
