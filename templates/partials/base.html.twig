@@ -23,6 +23,8 @@
             {% endblock %}
             {{ assets.css() }}
 
+            <link href="{{ url('theme://css/print.css') }}" rel="stylesheet" type="text/css" media="print" />
+
         {% endblock %}
     </head>
 
@@ -52,7 +54,7 @@
         <script type="text/javascript">
         Pizza.init(document.body, {
             donut: true,
-            donut_inner_ratio: 0.7,  
+            donut_inner_ratio: 0.7,
         });
         </script>
 
