@@ -13,6 +13,7 @@
 
   .large-4 {
     width: 33.33333%;
+    position: relative;
   }
 
   .large-5 {
@@ -44,6 +45,6 @@
   }
 
   .large-12 {
-    width: 80%;
+    width: 100%;
   }
 }
