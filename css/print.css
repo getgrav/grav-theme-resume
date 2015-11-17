@@ -47,4 +47,29 @@
   .large-12 {
     width: 100%;
   }
+  .recognitions .position {
+    width: auto;
+    top: 6rem
+  }
+  .interests .large-3 {
+    margin-right: 2rem;
+  }
+  .int_icon {
+    width: 7rem;
+    height: 7rem;
+  }
+  .int_icon i:before {
+    font-size: 2rem;
+
+  }
+  .lang .large-4 {
+    margin-right: 3rem;
+  }
+  .special li {
+    margin-bottom: 17rem;
+  }
+  .special {
+    overflow: hidden;
+    height: auto;
+  }
 }

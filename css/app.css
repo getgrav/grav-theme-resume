@@ -141,13 +141,13 @@ p {
   width: 1rem;
   height: 1rem;
   margin-right: 0.3rem;
-  background: #58585A;
+  background: #58585A !important;
   border-radius: 100%;
   display: block;
   margin-top: 0.2rem;
 }
 .ellipses li span.grey {
-  background: #D1D2D4;
+  background: #D1D2D4 !important;
 }
 
 /* Language Skills */
