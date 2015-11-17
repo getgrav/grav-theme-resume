@@ -47,12 +47,16 @@
   .large-12 {
     width: 100%;
   }
+  #header {
+    padding-top: 0;
+  }
   .recognitions .position {
     width: auto;
     top: 6rem
   }
   .interests .large-3 {
     margin-right: 2rem;
+    width: 24%;
   }
   .int_icon {
     width: 7rem;
@@ -71,5 +75,17 @@
   .special {
     overflow: hidden;
     height: auto;
+  }
+  .design [class*="block-grid-"] {
+    margin: 0 -0.08rem;
+  }
+  .design [class*="block-grid-"] > li {
+    padding: 0 0.08rem 0;
+  }
+  .experience .large-6 {
+    width: 80%;
+  }
+  .avoid_pagebreak {
+    page-break-inside: avoid;
   }
 }
