@@ -79,7 +79,7 @@ p {
     height: auto;
     overflow: hidden;
   }
-} 
+}
 .special li {
   border: 1px solid;
   border-radius: 100%;
@@ -92,7 +92,7 @@ p {
   .special li {
     margin-bottom: 4rem !important;
   }
-} 
+}
 .special i {
   text-align: center;
   position: relative;
@@ -101,7 +101,7 @@ p {
 }
 .special .pointer {
   height: 12rem;
-  background-color: #58585A;
+  background-color: #58585A !important;
   width: 1px;
   position: relative;
   left: 50%;
@@ -128,7 +128,7 @@ p {
   .special .desc {
     margin-top: 3rem;
   }
-} 
+}
 
 /* Skills */
 .design .small-block-grid-2 li {
@@ -141,13 +141,13 @@ p {
   width: 1rem;
   height: 1rem;
   margin-right: 0.3rem;
-  background: #58585A;
+  background: #58585A !important;
   border-radius: 100%;
   display: block;
   margin-top: 0.2rem;
 }
 .ellipses li span.grey {
-  background: #D1D2D4;
+  background: #D1D2D4 !important;
 }
 
 /* Language Skills */
