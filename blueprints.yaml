@@ -1,5 +1,5 @@
 name: Resume
-version: 1.2.0
+version: 1.3.0
 description: "Resume is a Grav adaptation of Fernando Báez resume PSD theme."
 icon: group
 author:
@@ -11,3 +11,6 @@ demo: http://demo.getgrav.org/resume-skeleton
 keywords: resume, resume, theme, modern
 bugs: https://github.com/getgrav/grav-theme-resume/issues
 license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
