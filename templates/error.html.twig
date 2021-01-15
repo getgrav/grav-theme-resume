@@ -5,7 +5,7 @@
       <h1>Error {{ page.header.http_response_code }}</h1>
     </header>
     <div class="page-content">
-      {{ page.content }}
+      {{ page.content|raw }}
     </div>
   </section>
 {% endblock %}

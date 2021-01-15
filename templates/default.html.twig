@@ -5,7 +5,7 @@
       <h1>{{ page.header.title }}</h1>
     </header>
     <div class="entry-content">
-     {{ page.content }}
+     {{ page.content|raw }}
    </div>
  </article>
 {% endblock %}
